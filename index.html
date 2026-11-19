@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#090914">
+<title>AHOURA GAMING | آرشیو گیمینگ</title>
+<style>
+:root{--bg:#080811;--panel:#111124;--panel2:#191932;--line:#303052;--text:#f5f3ff;--muted:#aaa8c7;--cyan:#35e7ff;--pink:#ff4fd8;--purple:#9b5cff;--yellow:#ffe36e}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at 10% 0%,#28134a 0,transparent 32%),radial-gradient(ellipse at 90% 10%,#092d43 0,transparent 30%),var(--bg);color:var(--text);font-family:Tahoma,Arial,sans-serif;min-height:100vh}
+header{padding:34px 18px 24px;text-align:center;border-bottom:1px solid #29294b;background:linear-gradient(180deg,#111126aa,transparent)}
+.logo{font-size:clamp(30px,7vw,64px);font-weight:1000;letter-spacing:2px;color:#fff;text-shadow:0 0 8px var(--cyan),0 0 22px var(--purple),0 0 42px var(--pink)}
+.tag{color:var(--cyan);letter-spacing:3px;font-size:12px;margin-top:8px}.hero{max-width:1100px;margin:22px auto 0;padding:22px;border:1px solid #484078;border-radius:22px;background:linear-gradient(120deg,#28164cdd,#101e35dd);box-shadow:0 0 30px #8b5cf633}
+.hero h1{margin:0 0 10px;font-size:clamp(22px,4vw,34px)}.hero p{color:#d4d0ef;line-height:1.9;margin:0}
+.wrap{max-width:1200px;margin:auto;padding:22px 16px 60px}.toprow{display:flex;gap:10px;justify-content:space-between;align-items:center;flex-wrap:wrap;margin-bottom:18px}.stats{color:var(--muted);font-size:13px}.admin{background:#21152f;color:#ffd9fa;border:1px solid #a64dba;border-radius:12px;padding:10px 14px;cursor:pointer}
+.foldergrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(155px,1fr));gap:13px;margin:16px 0 28px}
+.folder{cursor:pointer;text-align:right;padding:17px;border:1px solid var(--line);border-radius:18px;background:linear-gradient(145deg,#1a1a35,#101020);transition:.22s;min-height:112px;color:var(--text)}
+.folder:hover,.folder.active{transform:translateY(-4px);border-color:var(--cyan);box-shadow:0 0 20px #35e7ff30}
+.folder .emoji{font-size:28px;display:block;margin-bottom:10px}.folder b{display:block}.folder small{color:var(--muted);display:block;margin-top:7px}
+.sectionhead{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap;margin:12px 0 16px}.sectionhead h2{margin:0;font-size:22px}.sectionhead span{color:var(--muted);font-size:12px}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:15px}
+.card{background:linear-gradient(160deg,#17172d,#0e0e1c);border:1px solid #2c2c4b;border-radius:17px;overflow:hidden;transition:.2s;display:flex;flex-direction:column;min-height:220px}
+.card:hover{transform:translateY(-4px);border-color:var(--pink);box-shadow:0 0 22px #ff4fd822}
+.art{height:116px;display:grid;place-items:center;font-size:54px;background:radial-gradient(circle at 50% 45%,#54318b,#17172e 70%);position:relative}
+.art:after{content:"";position:absolute;inset:0;background:linear-gradient(135deg,transparent 35%,#35e7ff20,transparent 70%)}
+.cardbody{padding:14px;display:flex;flex-direction:column;gap:8px;flex:1}.card h3{font-size:16px;margin:0}.card p{font-size:12px;color:var(--muted);line-height:1.8;margin:0;flex:1}
+.pill{font-size:10px;color:var(--cyan);border:1px solid #23616c;border-radius:20px;padding:4px 8px;width:max-content}
+.actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:4px}.btn{border:0;border-radius:9px;padding:9px 11px;font:inherit;font-size:11px;text-decoration:none;cursor:pointer;background:linear-gradient(90deg,#743cff,#c43cff);color:white}.btn.alt{background:#22223c;border:1px solid #44446a}
+.empty{padding:30px;text-align:center;color:var(--muted);border:1px dashed #45456a;border-radius:16px}
+footer{text-align:center;color:#777594;padding:20px;border-top:1px solid #252540;font-size:12px;line-height:2}
+.modal{position:fixed;inset:0;background:#000b;display:none;place-items:center;padding:16px;z-index:10}.modal.show{display:grid}.box{width:min(440px,100%);background:#15152a;border:1px solid #7352aa;border-radius:18px;padding:20px;box-shadow:0 0 35px #9b5cff44}.box h3{margin-top:0}.box input,.box select,.box textarea{width:100%;margin:6px 0 12px;padding:11px;border-radius:9px;border:1px solid #414166;background:#090918;color:white;font:inherit}.box textarea{min-height:70px}.rowbtn{display:flex;gap:8px;flex-wrap:wrap}.notice{color:#aaa8c7;font-size:11px;line-height:1.8}
+@media(max-width:520px){.wrap{padding:16px 12px 40px}.hero{padding:17px}.cards{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.card{min-height:235px}.art{height:90px;font-size:42px}.cardbody{padding:11px}.card h3{font-size:14px}.foldergrid{grid-template-columns:repeat(2,1fr)}}
+</style>
+</head>
+<body>
+<header>
+ <div class="logo">AHOURA GAMING</div>
+ <div class="tag">PLAY • EXPLORE • CREATE</div>
+ <div class="hero"><h1>دنیای بازی‌ها، همه در یک آرشیو! 🎮</h1><p>بدون جست‌وجو؛ فقط پوشه موردنظرت رو انتخاب کن و بین بازی‌ها، اسکین‌ها، مودها، مپ‌ها و راهنماها بچرخ.</p></div>
+</header>
+<main class="wrap">
+ <div class="toprow"><div class="stats" id="stats">آرشیو بزرگ بازی و محتوای گیمینگ</div><button class="admin" onclick="openAdmin()">⚙️ مدیریت محتوا</button></div>
+ <div class="sectionhead"><h2>📁 پوشه‌های اصلی</h2><span>برای ورود، روی هر پوشه بزن</span></div>
+ <div class="foldergrid" id="folders">
+  <button class="folder active" data-cat="all"><span class="emoji">🗂️</span><b>همه محتوا</b><small>نمایش تمام آرشیو</small></button>
+  <button class="folder" data-cat="games"><span class="emoji">🎮</span><b>بازی‌ها</b><small>بیش از ۳۰ عنوان</small></button>
+  <button class="folder" data-cat="minecraft"><span class="emoji">🟩</span><b>دنیای Minecraft</b><small>اسکین، مود و مپ</small></button>
+  <button class="folder" data-cat="skins"><span class="emoji">🧑‍🎤</span><b>اسکین‌ها</b><small>شخصیت‌ها و ظاهرها</small></button>
+  <button class="folder" data-cat="mods"><span class="emoji">🧩</span><b>مودها</b><small>افزونه و تغییرات بازی</small></button>
+  <button class="folder" data-cat="maps"><span class="emoji">🗺️</span><b>مپ‌ها</b><small>ماجراجویی و ساخت‌وساز</small></button>
+  <button class="folder" data-cat="guides"><span class="emoji">📚</span><b>راهنماها</b><small>ترفند و آموزش</small></button>
+  <button class="folder" data-cat="news"><span class="emoji">🚀</span><b>اخبار و معرفی</b><small>خبرهای دنیای گیم</small></button>
+ </div>
+ <div class="sectionhead"><h2 id="heading">✨ همه محتوا</h2><span id="count"></span></div>
+ <div class="cards" id="cards"></div>
+</main>
+<footer>AHOURA GAMING © 2026 · این سایت یک آرشیو معرفی و دسترسی به منابع معتبر است. برای دریافت بازی‌ها از فروشگاه‌ها و وب‌سایت‌های رسمی استفاده کن.</footer>
+
+<div class="modal" id="adminModal"><div class="box">
+ <h3>🔐 ورود به مدیریت</h3>
+ <label>رمز مدیریت</label><input id="pass" type="password" placeholder="رمز را وارد کن">
+ <div class="rowbtn"><button class="btn" onclick="login()">ورود</button><button class="btn alt" onclick="closeModal()">بستن</button></div>
+ <p class="notice">این پنل نمونه و محلی است؛ رمز داخل فایل HTML قابل مشاهده است و تغییرات فقط در همین مرورگر ذخیره می‌شوند.</p>
+</div></div>
+<div class="modal" id="editorModal"><div class="box">
+ <h3>➕ افزودن محتوا به آرشیو</h3>
+ <label>عنوان</label><input id="newTitle" placeholder="مثلاً Minecraft Parkour Map">
+ <label>دسته‌بندی</label><select id="newCat"><option value="games">بازی‌ها</option><option value="skins">اسکین‌ها</option><option value="mods">مودها</option><option value="maps">مپ‌ها</option><option value="guides">راهنماها</option><option value="news">اخبار</option></select>
+ <label>توضیح کوتاه</label><textarea id="newDesc" placeholder="توضیح محتوا..."></textarea>
+ <label>لینک منبع (اختیاری)</label><input id="newUrl" placeholder="https://...">
+ <div class="rowbtn"><button class="btn" onclick="addItem()">ذخیره در آرشیو</button><button class="btn alt" onclick="closeEditor()">بستن</button></div>
+ <hr style="border-color:#343451;margin:18px 0"><button class="btn alt" onclick="resetCustom()">حذف مواردی که خودم اضافه کردم</button>
+ <p class="notice">محتوای اضافه‌شده روی همین دستگاه ذخیره می‌شود.</p>
+</div></div>
+<script>
+const ADMIN_PASSWORD="1396";
+const base=[
+['Minecraft','games','🟩','ساخت‌وساز، بقا و ماجراجویی در دنیای بلوکی.','https://www.minecraft.net/'],
+['Grand Theft Auto V','games','🚘','جهان‌باز، رانندگی و داستان جنایی.','https://www.rockstargames.com/gta-v'],
+['Grand Theft Auto VI','games','🌴','معرفی نسخه جدید مجموعه GTA.','https://www.rockstargames.com/VI'],
+['Red Dead Redemption 2','games','🤠','ماجراجویی جهان‌باز در غرب وحشی.','https://www.rockstargames.com/reddeadredemption2'],
+['Resident Evil 4','games','🧟','ماجراجویی و بقا در دنیای ترسناک.','https://www.residentevil.com/'],
+['Resident Evil Village','games','🏚️','یکی دیگر از ماجراهای مجموعه رزیدنت اویل.','https://www.residentevil.com/'],
+['Forza Horizon 5','games','🏎️','رانندگی و مسابقه در دنیایی بزرگ.','https://forza.net/'],
+['EA SPORTS FC 26','games','⚽','فوتبال، تیم‌سازی و مسابقه.','https://www.ea.com/games/ea-sports-fc'],
+['eFootball','games','⚽','تجربه فوتبال دیجیتالی.','https://www.konami.com/efootball/'],
+['Roblox','games','🧱','هزاران تجربه ساخته‌شده توسط کاربران.','https://www.roblox.com/'],
+['The Sims 4','games','🏡','ساخت خانه و زندگی مجازی.','https://www.ea.com/games/the-sims/the-sims-4'],
+['Terraria','games','⛏️','اکتشاف، ساخت‌وساز و ماجراجویی دوبعدی.','https://terraria.org/'],
+['Stardew Valley','games','🌻','کشاورزی، دوستی و زندگی آرام.','https://www.stardewvalley.net/'],
+['Among Us','games','🚀','بازی گروهی و پیدا کردن خرابکار.','https://www.innersloth.com/games/among-us/'],
+['Fall Guys','games','🏁','رقابت‌های بامزه و مرحله‌ای.','https://www.fallguys.com/'],
+['Rocket League','games','🚗','فوتبال با ماشین‌های موشکی.','https://www.rocketleague.com/'],
+['Fortnite','games','🪂','بازی رقابتی و تجربه‌های متنوع.','https://www.fortnite.com/'],
+['Apex Legends','games','🎯','نبرد تیمی قهرمان‌محور.','https://www.ea.com/games/apex-legends'],
+['Call of Duty','games','🎖️','مجموعه بازی‌های اکشن و رقابتی.','https://www.callofduty.com/'],
+['Overwatch 2','games','🦸','بازی تیمی قهرمان‌محور.','https://overwatch.blizzard.com/'],
+['Hogwarts Legacy','games','🪄','ماجراجویی در دنیای جادوگری.','https://www.hogwartslegacy.com/'],
+['God of War Ragnarök','games','🪓','ماجراجویی اسطوره‌ای و داستانی.','https://www.playstation.com/games/god-of-war-ragnarok/'],
+['Spider-Man 2','games','🕷️','ماجراجویی ابرقهرمانی در شهر.','https://www.playstation.com/games/marvels-spider-man-2/'],
+['Horizon Forbidden West','games','🤖','اکتشاف جهانی پر از ماشین‌های غول‌آسا.','https://www.playstation.com/games/horizon-forbidden-west/'],
+['Elden Ring','games','🐉','ماجراجویی فانتزی در جهانی گسترده.','https://en.bandainamcoent.eu/elden-ring/elden-ring'],
+['Cyberpunk 2077','games','🌆','ماجراجویی علمی‌تخیلی در شهر آینده.','https://www.cyberpunk.net/'],
+['The Witcher 3','games','🐺','ماجراجویی فانتزی و داستانی.','https://www.thewitcher.com/'],
+['ARK: Survival Ascended','games','🦖','بقا و ماجراجویی در دنیای دایناسورها.','https://www.playark.com/'],
+['Subnautica','games','🌊','اکتشاف دنیای زیر آب.','https://unknownworlds.com/subnautica/'],
+['No Man’s Sky','games','🪐','اکتشاف سیاره‌ها و فضا.','https://www.nomanssky.com/'],
+['Euro Truck Simulator 2','games','🚛','رانندگی کامیون در جاده‌های اروپا.','https://eurotrucksimulator2.com/'],
+['BeamNG.drive','games','🚙','شبیه‌ساز رانندگی و فیزیک خودرو.','https://www.beamng.com/'],
+['Need for Speed Unbound','games','💨','مسابقه خیابانی و شخصی‌سازی خودرو.','https://www.ea.com/games/need-for-speed'],
+['Plants vs. Zombies','games','🌻','دفاع از باغ در برابر زامبی‌ها.','https://www.ea.com/'],
+['Cuphead','games','☕','ماجراجویی کارتونی چالش‌برانگیز.','https://www.cupheadgame.com/'],
+['Hollow Knight','games','🪲','اکتشاف در دنیایی زیرزمینی.','https://www.hollowknight.com/'],
+['Brawlhalla','games','🥊','مبارزه پلتفرمی چندنفره.','https://www.brawlhalla.com/'],
+['Geometry Dash','games','🔺','مراحل ریتمیک و پرتحرک.','https://www.robtopgames.com/'],
+['PUBG: BATTLEGROUNDS','games','🪖','بازی رقابتی بقا.','https://pubg.com/'],
+['Minecraft Skins','skins','🧑‍🎤','هزاران اسکین برای شخصیت ماینکرفت.','https://www.minecraft.net/en-us/msaprofile/mygames/editskin'],
+['NameMC Skins','skins','🎭','مرور مجموعه اسکین‌های ساخته‌شده توسط کاربران.','https://namemc.com/minecraft-skins'],
+['Minecraft Skin Editor','skins','🎨','ساخت و ویرایش اسکین دلخواه.','https://www.minecraftskins.com/skin-editor/'],
+['Minecraft Mods','mods','🧩','پیدا کردن مودهای گوناگون ماینکرفت.','https://modrinth.com/mods'],
+['CurseForge Mods','mods','✨','مجموعه مودها و افزونه‌های ماینکرفت.','https://www.curseforge.com/minecraft'],
+['Minecraft Resource Packs','mods','🖼️','بسته‌های بافت و ظاهر بازی.','https://modrinth.com/resourcepacks'],
+['Minecraft Shaders','mods','💡','افکت‌های نور و گرافیک (بسته به دستگاه).','https://modrinth.com/shaders'],
+['Minecraft Maps','maps','🗺️','مپ‌های متنوع برای ماجراجویی و بازی.','https://www.minecraftmaps.com/'],
+['Planet Minecraft Maps','maps','🏰','مپ‌ها و سازه‌های ساخته‌شده توسط جامعه.','https://www.planetminecraft.com/projects/'],
+['Minecraft Parkour Maps','maps','🏃','مپ‌های پارکور و مهارتی.','https://www.minecraftmaps.com/parkour-maps'],
+['Minecraft Survival Maps','maps','🌲','مپ‌های بقا و چالش.','https://www.minecraftmaps.com/survival-maps'],
+['Minecraft Adventure Maps','maps','🧭','مپ‌های داستانی و ماجراجویی.','https://www.minecraftmaps.com/adventure-maps'],
+['Minecraft Redstone Guide','guides','🔴','آشنایی با مدارها و سازوکارهای ردستون.','https://www.minecraft.net/'],
+['Minecraft Beginner Guide','guides','📘','شروع بازی و نکته‌های اولیه.','https://www.minecraft.net/'],
+['GTA Online News','news','📡','خبرها و به‌روزرسانی‌های رسمی GTA.','https://www.rockstargames.com/newswire'],
+['Minecraft News','news','📰','خبرها و به‌روزرسانی‌های ماینکرفت.','https://www.minecraft.net/en-us/articles'],
+['PlayStation News','news','🎮','خبرهای رسمی پلی‌استیشن.','https://blog.playstation.com/'],
+['Xbox News','news','🟩','خبرهای رسمی ایکس‌باکس.','https://news.xbox.com/']
+];
+const labels={all:'✨ همه محتوا',games:'🎮 بازی‌ها',minecraft:'🟩 دنیای Minecraft',skins:'🧑‍🎤 اسکین‌ها',mods:'🧩 مودها',maps:'🗺️ مپ‌ها',guides:'📚 راهنماها',news:'🚀 اخبار و معرفی'};
+let current='all',custom=JSON.parse(localStorage.getItem('ahouraCustom')||'[]'),admin=false;
+function itemCat(x){return x[1]==='games'&&x[0].toLowerCase().includes('minecraft')?'minecraft':x[1]}
+function allItems(){return [...base,...custom]}
+function shownItems(){return allItems().filter(x=>current==='all'||(current==='minecraft'?x[1]==='games'&&x[0].toLowerCase().includes('minecraft')||['skins','mods','maps'].includes(x[1]):x[1]===current))}
+function render(){
+ const list=shownItems(),cards=document.getElementById('cards');document.getElementById('heading').textContent=labels[current];document.getElementById('count').textContent=list.length+' مورد';
+ document.getElementById('stats').textContent='📦 '+allItems().length+' آیتم در آرشیو · بدون نیاز به جست‌وجو';
+ cards.innerHTML='';
+ if(!list.length){cards.innerHTML='<div class="empty">هنوز محتوایی در این پوشه نیست.</div>';return}
+ list.forEach((x,i)=>{const [title,cat,emoji,desc,url]=x;let el=document.createElement('article');el.className='card';el.innerHTML=`<div class="art">${emoji||'🎮'}</div><div class="cardbody"><span class="pill">${cat==='games'?'GAME':cat.toUpperCase()}</span><h3></h3><p></p><div class="actions"><a class="btn" target="_blank" rel="noopener noreferrer">مشاهده منبع ↗</a>${admin&&x[5]==='custom'?'<button class="btn alt delete">حذف</button>':''}</div></div>`;el.querySelector('h3').textContent=title;el.querySelector('p').textContent=desc;let a=el.querySelector('a');if(url&&/^https:\/\//i.test(url)){a.href=url}else{a.href='https://www.minecraft.net/';a.textContent='منبع رسمی ↗'}if(admin&&x[5]==='custom')el.querySelector('.delete').onclick=()=>removeItem(x);cards.appendChild(el)});
+}
+document.querySelectorAll('.folder').forEach(b=>b.addEventListener('click',()=>{document.querySelectorAll('.folder').forEach(x=>x.classList.remove('active'));b.classList.add('active');current=b.dataset.cat;render();document.getElementById('heading').scrollIntoView({behavior:'smooth',block:'center'})}));
+function openAdmin(){document.getElementById('adminModal').classList.add('show');document.getElementById('pass').value=''}
+function closeModal(){document.getElementById('adminModal').classList.remove('show')}
+function closeEditor(){document.getElementById('editorModal').classList.remove('show')}
+function login(){if(document.getElementById('pass').value!==ADMIN_PASSWORD){alert('رمز اشتباه است!');return}admin=true;closeModal();document.getElementById('editorModal').classList.add('show');render()}
+function addItem(){let t=document.getElementById('newTitle').value.trim(),c=document.getElementById('newCat').value,d=document.getElementById('newDesc').value.trim(),u=document.getElementById('newUrl').value.trim();if(!t||!d){alert('عنوان و توضیح را وارد کن.');return}if(u&&!/^https:\/\//i.test(u)){alert('لینک باید با https:// شروع شود.');return}custom.push([t,c,'🎮',d,u,'custom']);localStorage.setItem('ahouraCustom',JSON.stringify(custom));document.getElementById('newTitle').value='';document.getElementById('newDesc').value='';document.getElementById('newUrl').value='';render();alert('به آرشیو اضافه شد!')}
+function removeItem(x){if(!confirm('این مورد حذف شود؟'))return;custom=custom.filter(y=>y!==x);localStorage.setItem('ahouraCustom',JSON.stringify(custom));render()}
+function resetCustom(){if(!confirm('همه مواردی که خودت اضافه کردی حذف شوند؟'))return;custom=[];localStorage.removeItem('ahouraCustom');render();alert('موارد اضافه‌شده پاک شدند.')}
+render();
+</script>
+</body>
+</html>
